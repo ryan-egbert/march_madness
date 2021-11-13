@@ -3,7 +3,7 @@ import time
 import pickle as pck
 
 LEAGUE = "ncb"
-YEARS = list(range(2001,2021))
+YEARS = list(range(2004,2021))
 
 game_ids = []
 for year in YEARS:
