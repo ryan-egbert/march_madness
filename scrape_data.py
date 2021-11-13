@@ -3,7 +3,7 @@ import time
 import pickle as pck
 
 LEAGUE = "ncb"
-YEARS = list(range(2001,2022))
+YEARS = list(range(2001,2021))
 
 game_ids = []
 for year in YEARS:
@@ -21,5 +21,5 @@ for year in YEARS:
 
     print(f"Year {year} finished in {round(end - start, 3)} seconds.")
 
-
-pck.dump(game_ids, "march_madness/games/pck/game_ids.pck")
+with open("games/pck/game_ids.pck", 'wb') as f:
+    pck.dump(game_ids, f)
