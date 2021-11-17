@@ -1,6 +1,7 @@
 import espn_scraper as espn
 import time
 import pickle as pck
+import shutil
 
 LEAGUE = "ncb"
 YEARS = list(range(2004,2021))
@@ -20,6 +21,7 @@ for year in YEARS:
     end = time.perf_counter()
 
     print(f"Year {year} finished in {round(end - start, 3)} seconds.")
+    shutil.rmtree("games/ncb/scoreboard/")
 
 with open("games/pck/game_ids.pck", 'wb') as f:
     pck.dump(game_ids, f)
