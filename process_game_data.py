@@ -4,7 +4,7 @@ import os
 files = os.listdir('games/ncb/boxscore')
 
 out_file = open('game_data.csv', 'w')
-columns = ['gameid','team1id','team1name','team1fgm', 'team1fga','team13pm','team13pa','team1ftm','team1fta','team1oreb','team1dreb','team1ast','team1stl','team1blk','team1to','team1fls','team2id','team2name','team2fgm','team2fga','team23pm','team23pa','team2ftm','team2fta','team2oreb','team2dreb','team2ast','team2stl','team2blk','team2to','team2fls',]
+columns = ['gameid','date','team1id','team1name','team1fgm', 'team1fga','team13pm','team13pa','team1ftm','team1fta','team1oreb','team1dreb','team1ast','team1stl','team1blk','team1to','team1fls','team2id','team2name','team2fgm','team2fga','team23pm','team23pa','team2ftm','team2fta','team2oreb','team2dreb','team2ast','team2stl','team2blk','team2to','team2fls',]
 out_file.write(','.join(columns))
 out_file.write('\n')
 
