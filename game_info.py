@@ -14,6 +14,7 @@ out_file.write(','.join(columns))
 out_file.write('\n')
 counter = 0
 for game_id in all_data:
+    print(game_id)
     counter += 1
 
     url = espn.get_game_url(DATA_TYPE, 'ncb', game_id)
@@ -70,7 +71,6 @@ for game_id in all_data:
         if counter > 100:
             shutil.rmtree("games/ncb/boxscore/")
             counter = 0
-            break
 
         out_file.write(','.join(info) + '\n')
     except:
